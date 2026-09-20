@@ -1,0 +1,1246 @@
+{
+  "profiles": [
+    {
+      "id": "usr-1789012615796-vi20r",
+      "phone": "7209691128",
+      "full_name": "Dr. Arjun Sharma",
+      "email": "arjun.sharma@tutorplug.com",
+      "role": "tutor",
+      "status": "active",
+      "created_at": "2026-09-10T03:56:55.796Z",
+      "updated_at": "2026-09-10T03:56:55.796Z"
+    },
+    {
+      "id": "usr-student-main",
+      "phone": "9876543210",
+      "full_name": "Aarav Sharma",
+      "email": "aarav.sharma@student.tutorplug.com",
+      "role": "student",
+      "status": "active",
+      "created_at": "2026-09-12T04:40:01.721Z",
+      "updated_at": "2026-09-12T04:40:01.721Z"
+    },
+    {
+      "id": "usr-student-rohan",
+      "phone": "9988776655",
+      "full_name": "Rohan Mehta",
+      "email": "rohan.mehta@student.tutorplug.com",
+      "role": "student",
+      "status": "active",
+      "created_at": "2026-09-08T07:46:35.104Z",
+      "updated_at": "2026-09-08T07:46:35.104Z"
+    },
+    {
+      "id": "usr-1788795018002-quazl",
+      "phone": "9811122233",
+      "full_name": "Prof. Rajesh Kumar",
+      "email": "rajesh.kumar@tutorplug.com",
+      "role": "tutor",
+      "status": "active",
+      "created_at": "2026-09-07T15:30:18.002Z",
+      "updated_at": "2026-09-07T15:30:18.002Z"
+    },
+    {
+      "id": "usr-tutor-priya",
+      "phone": "9822233344",
+      "full_name": "Dr. Priya Verma",
+      "email": "priya.verma@tutorplug.com",
+      "role": "tutor",
+      "status": "active",
+      "created_at": "2026-09-05T10:20:00.000Z",
+      "updated_at": "2026-09-05T10:20:00.000Z"
+    },
+    {
+      "id": "usr-tutor-sunita",
+      "phone": "9833344455",
+      "full_name": "Dr. Sunita Menon",
+      "email": "sunita.menon@tutorplug.com",
+      "role": "tutor",
+      "status": "active",
+      "created_at": "2026-09-04T12:00:00.000Z",
+      "updated_at": "2026-09-04T12:00:00.000Z"
+    },
+    {
+      "id": "usr-tutor-rohan-cs",
+      "phone": "9844455566",
+      "full_name": "Rohan Singhania",
+      "email": "rohan.cs@tutorplug.com",
+      "role": "tutor",
+      "status": "active",
+      "created_at": "2026-09-03T14:30:00.000Z",
+      "updated_at": "2026-09-03T14:30:00.000Z"
+    },
+    {
+      "id": "usr-tutor-ananya",
+      "phone": "9855566677",
+      "full_name": "Ananya Sen",
+      "email": "ananya.sen@tutorplug.com",
+      "role": "tutor",
+      "status": "active",
+      "created_at": "2026-09-02T16:15:00.000Z",
+      "updated_at": "2026-09-02T16:15:00.000Z"
+    },
+    {
+      "id": "usr-admin-master",
+      "phone": "9900011223",
+      "email": "admin@tutorplug.com",
+      "full_name": "Platform Administrator",
+      "role": "admin",
+      "status": "active",
+      "created_at": "2024-01-01T00:00:00.000Z",
+      "updated_at": "2026-09-07T15:29:57.549Z"
+    }
+  ],
+  "student_profiles": [
+    {
+      "id": "stud-1",
+      "user_id": "usr-student-main",
+      "class_level": "Class 11 - 12 (Senior Secondary)",
+      "board": "CBSE",
+      "preferred_language": "English",
+      "learning_goals": "Targeting 99+ percentile in JEE Advanced Mathematics and Physics.",
+      "timezone": "Asia/Kolkata",
+      "created_at": "2026-09-12T04:40:01.721Z",
+      "updated_at": "2026-09-12T04:40:01.721Z"
+    },
+    {
+      "id": "stud-2",
+      "user_id": "usr-student-rohan",
+      "class_level": "Class 9 - 10 (Secondary)",
+      "board": "ICSE / ISC",
+      "preferred_language": "English",
+      "learning_goals": "Mastering ICSE Chemistry and Mathematics concepts.",
+      "timezone": "Asia/Kolkata",
+      "created_at": "2026-09-08T07:46:35.104Z",
+      "updated_at": "2026-09-08T07:46:35.104Z"
+    }
+  ],
+  "tutor_profiles": [
+    {
+      "id": "tut-1788795034320",
+      "user_id": "usr-1788795018002-quazl",
+      "headline": "Former HOD Physics • 15+ Yrs Exp • Ex-FIITJEE",
+      "bio": "Specialized in IIT-JEE Advanced Physics, Mechanics, Electrodynamics, and CBSE/State Board 12th preparations with visual 3D problem solving.",
+      "qualifications": "Ph.D. in Physics from IIT Delhi",
+      "degree": "Ph.D. in Physics",
+      "institution": "IIT Delhi",
+      "teaching_methodology": "Interactive first-principles conceptual breakdown followed by rigorous numerical practice.",
+      "experience_years": 15,
+      "hourly_rate": 1800,
+      "verification_status": "verified",
+      "timezone": "Asia/Kolkata",
+      "average_rating": 4.95,
+      "total_reviews": 48,
+      "total_classes_taught": 124,
+      "profile_completion_percentage": 100,
+      "created_at": "2026-09-07T15:30:34.320Z",
+      "updated_at": "2026-09-12T14:22:46.681Z",
+      "user": {
+        "id": "usr-1788795018002-quazl",
+        "phone": "9811122233",
+        "full_name": "Prof. Rajesh Kumar",
+        "email": "rajesh.kumar@tutorplug.com",
+        "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200",
+        "role": "tutor",
+        "status": "active",
+        "created_at": "2026-09-07T15:30:18.002Z",
+        "updated_at": "2026-09-07T15:30:18.002Z"
+      },
+      "subjects": [
+        {
+          "id": "sub-2",
+          "name": "Physics",
+          "slug": "physics"
+        },
+        {
+          "id": "sub-1",
+          "name": "Mathematics",
+          "slug": "mathematics"
+        }
+      ],
+      "boards": [
+        {
+          "id": "brd-1",
+          "name": "CBSE"
+        },
+        {
+          "id": "brd-2",
+          "name": "ICSE / ISC"
+        },
+        {
+          "id": "brd-5",
+          "name": "State Board"
+        }
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "availability": [
+        {
+          "id": "av-1",
+          "tutor_id": "tut-1788795034320",
+          "day_of_week": 1,
+          "start_time": "17:00",
+          "end_time": "21:00",
+          "timezone": "Asia/Kolkata",
+          "is_available": true
+        },
+        {
+          "id": "av-2",
+          "tutor_id": "tut-1788795034320",
+          "day_of_week": 3,
+          "start_time": "17:00",
+          "end_time": "21:00",
+          "timezone": "Asia/Kolkata",
+          "is_available": true
+        }
+      ]
+    },
+    {
+      "id": "tut-sharma-math",
+      "user_id": "usr-1789012615796-vi20r",
+      "headline": "IIT Bombay Alum • Calculus & Algebra Specialist",
+      "bio": "Mentored 200+ students to top 1,000 ranks in JEE Advanced and 95%+ in CBSE Class 12 Boards. Focused on clarity, speed, and geometric visualization.",
+      "qualifications": "B.Tech & M.Tech in CSE from IIT Bombay",
+      "degree": "M.Tech CSE",
+      "institution": "IIT Bombay",
+      "teaching_methodology": "Socratic question-driven tutoring with step-by-step whiteboard derivations.",
+      "experience_years": 8,
+      "hourly_rate": 1500,
+      "verification_status": "verified",
+      "timezone": "Asia/Kolkata",
+      "average_rating": 4.98,
+      "total_reviews": 62,
+      "total_classes_taught": 190,
+      "profile_completion_percentage": 100,
+      "created_at": "2026-09-10T03:56:55.796Z",
+      "updated_at": "2026-09-10T03:56:55.796Z",
+      "user": {
+        "id": "usr-1789012615796-vi20r",
+        "phone": "7209691128",
+        "full_name": "Dr. Arjun Sharma",
+        "email": "arjun.sharma@tutorplug.com",
+        "avatar_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200",
+        "role": "tutor",
+        "status": "active",
+        "created_at": "2026-09-10T03:56:55.796Z",
+        "updated_at": "2026-09-10T03:56:55.796Z"
+      },
+      "subjects": [
+        {
+          "id": "sub-1",
+          "name": "Mathematics",
+          "slug": "mathematics"
+        },
+        {
+          "id": "sub-4",
+          "name": "Computer Science",
+          "slug": "computer-science"
+        }
+      ],
+      "boards": [
+        {
+          "id": "brd-1",
+          "name": "CBSE"
+        },
+        {
+          "id": "brd-2",
+          "name": "ICSE / ISC"
+        },
+        {
+          "id": "brd-3",
+          "name": "IB (International Baccalaureate)"
+        }
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "availability": [
+        {
+          "id": "av-sharma-1",
+          "tutor_id": "tut-sharma-math",
+          "day_of_week": 2,
+          "start_time": "16:00",
+          "end_time": "20:00",
+          "timezone": "Asia/Kolkata",
+          "is_available": true
+        },
+        {
+          "id": "av-sharma-2",
+          "tutor_id": "tut-sharma-math",
+          "day_of_week": 4,
+          "start_time": "16:00",
+          "end_time": "20:00",
+          "timezone": "Asia/Kolkata",
+          "is_available": true
+        }
+      ]
+    },
+    {
+      "id": "tut-priya-chem",
+      "user_id": "usr-tutor-priya",
+      "headline": "Gold Medalist • Organic Chemistry & NEET Coach",
+      "bio": "Simplifying reaction mechanisms, stereochemistry, and physical chemistry calculations for CBSE, ICSE, and NEET aspirants.",
+      "qualifications": "M.Sc. & Ph.D. in Chemistry, Delhi University",
+      "degree": "Ph.D. Chemistry",
+      "institution": "Delhi University",
+      "teaching_methodology": "Memory maps, reaction flowcharts, and high-yield question discussions.",
+      "experience_years": 10,
+      "hourly_rate": 1400,
+      "verification_status": "verified",
+      "timezone": "Asia/Kolkata",
+      "average_rating": 4.92,
+      "total_reviews": 39,
+      "total_classes_taught": 95,
+      "profile_completion_percentage": 95,
+      "created_at": "2026-09-05T10:20:00.000Z",
+      "updated_at": "2026-09-05T10:20:00.000Z",
+      "user": {
+        "id": "usr-tutor-priya",
+        "phone": "9822233344",
+        "full_name": "Dr. Priya Verma",
+        "email": "priya.verma@tutorplug.com",
+        "avatar_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200",
+        "role": "tutor",
+        "status": "active",
+        "created_at": "2026-09-05T10:20:00.000Z",
+        "updated_at": "2026-09-05T10:20:00.000Z"
+      },
+      "subjects": [
+        {
+          "id": "sub-3",
+          "name": "Chemistry",
+          "slug": "chemistry"
+        }
+      ],
+      "boards": [
+        {
+          "id": "brd-1",
+          "name": "CBSE"
+        },
+        {
+          "id": "brd-2",
+          "name": "ICSE / ISC"
+        },
+        {
+          "id": "brd-5",
+          "name": "State Board"
+        }
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "availability": [
+        {
+          "id": "av-priya-1",
+          "tutor_id": "tut-priya-chem",
+          "day_of_week": 1,
+          "start_time": "18:00",
+          "end_time": "22:00",
+          "timezone": "Asia/Kolkata",
+          "is_available": true
+        }
+      ]
+    },
+    {
+      "id": "tut-sunita-bio",
+      "user_id": "usr-tutor-sunita",
+      "headline": "Senior Biology Educator • MBBS Background • NEET Focus",
+      "bio": "Detailed NCERT line-by-line mastery, genetics, cytology, and physiology. 10+ years helping students crack medical entrance examinations.",
+      "qualifications": "MBBS, AIIMS New Delhi",
+      "degree": "MBBS",
+      "institution": "AIIMS New Delhi",
+      "teaching_methodology": "Diagrammatic explanations, mnemonic techniques, and past 15-year paper analysis.",
+      "experience_years": 12,
+      "hourly_rate": 1600,
+      "verification_status": "verified",
+      "timezone": "Asia/Kolkata",
+      "average_rating": 4.96,
+      "total_reviews": 51,
+      "total_classes_taught": 140,
+      "profile_completion_percentage": 100,
+      "created_at": "2026-09-04T12:00:00.000Z",
+      "updated_at": "2026-09-04T12:00:00.000Z",
+      "user": {
+        "id": "usr-tutor-sunita",
+        "phone": "9833344455",
+        "full_name": "Dr. Sunita Menon",
+        "email": "sunita.menon@tutorplug.com",
+        "avatar_url": "https://images.unsplash.com/photo-1594824813589-3221e6498cf8?w=200",
+        "role": "tutor",
+        "status": "active",
+        "created_at": "2026-09-04T12:00:00.000Z",
+        "updated_at": "2026-09-04T12:00:00.000Z"
+      },
+      "subjects": [
+        {
+          "id": "sub-5",
+          "name": "Biology",
+          "slug": "biology"
+        }
+      ],
+      "boards": [
+        {
+          "id": "brd-1",
+          "name": "CBSE"
+        },
+        {
+          "id": "brd-2",
+          "name": "ICSE / ISC"
+        },
+        {
+          "id": "brd-5",
+          "name": "State Board"
+        }
+      ],
+      "languages": [
+        "English",
+        "Hindi",
+        "Malayalam"
+      ],
+      "availability": [
+        {
+          "id": "av-sunita-1",
+          "tutor_id": "tut-sunita-bio",
+          "day_of_week": 3,
+          "start_time": "15:00",
+          "end_time": "19:00",
+          "timezone": "Asia/Kolkata",
+          "is_available": true
+        }
+      ]
+    },
+    {
+      "id": "tut-rohan-cs",
+      "user_id": "usr-tutor-rohan-cs",
+      "headline": "Lead SWE @ Tech Unicorn • Python, DSA & AP CS",
+      "bio": "Hands-on coding, algorithms, CBSE Class 11-12 Computer Science, Python, SQL, and competitive programming with live pair programming.",
+      "qualifications": "B.Tech Computer Science, BITS Pilani",
+      "degree": "B.Tech CSE",
+      "institution": "BITS Pilani",
+      "teaching_methodology": "Interactive live coding sessions, project-based mastery, and LeetCode problem solving.",
+      "experience_years": 6,
+      "hourly_rate": 1300,
+      "verification_status": "verified",
+      "timezone": "Asia/Kolkata",
+      "average_rating": 4.9,
+      "total_reviews": 27,
+      "total_classes_taught": 72,
+      "profile_completion_percentage": 90,
+      "created_at": "2026-09-03T14:30:00.000Z",
+      "updated_at": "2026-09-03T14:30:00.000Z",
+      "user": {
+        "id": "usr-tutor-rohan-cs",
+        "phone": "9844455566",
+        "full_name": "Rohan Singhania",
+        "email": "rohan.cs@tutorplug.com",
+        "avatar_url": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=200",
+        "role": "tutor",
+        "status": "active",
+        "created_at": "2026-09-03T14:30:00.000Z",
+        "updated_at": "2026-09-03T14:30:00.000Z"
+      },
+      "subjects": [
+        {
+          "id": "sub-4",
+          "name": "Computer Science",
+          "slug": "computer-science"
+        }
+      ],
+      "boards": [
+        {
+          "id": "brd-1",
+          "name": "CBSE"
+        },
+        {
+          "id": "brd-2",
+          "name": "ICSE / ISC"
+        },
+        {
+          "id": "brd-3",
+          "name": "IB (International Baccalaureate)"
+        }
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "availability": [
+        {
+          "id": "av-rohan-1",
+          "tutor_id": "tut-rohan-cs",
+          "day_of_week": 5,
+          "start_time": "18:00",
+          "end_time": "22:00",
+          "timezone": "Asia/Kolkata",
+          "is_available": true
+        }
+      ]
+    },
+    {
+      "id": "tut-ananya-eng",
+      "user_id": "usr-tutor-ananya",
+      "headline": "Cambridge Certified • ICSE/CBSE English & Writing",
+      "bio": "Expert in Shakespeare, drama analysis, literary criticism, academic essay structuring, and grammar for ICSE/ISC and CBSE boards.",
+      "qualifications": "M.A. English Literature, Jadavpur University",
+      "degree": "M.A. English",
+      "institution": "Jadavpur University",
+      "teaching_methodology": "Textual close-reading, essay-writing frameworks, and vocabulary expansion.",
+      "experience_years": 7,
+      "hourly_rate": 1100,
+      "verification_status": "unverified",
+      "timezone": "Asia/Kolkata",
+      "average_rating": 4.85,
+      "total_reviews": 16,
+      "total_classes_taught": 38,
+      "profile_completion_percentage": 85,
+      "created_at": "2026-09-02T16:15:00.000Z",
+      "updated_at": "2026-09-02T16:15:00.000Z",
+      "user": {
+        "id": "usr-tutor-ananya",
+        "phone": "9855566677",
+        "full_name": "Ananya Sen",
+        "email": "ananya.sen@tutorplug.com",
+        "avatar_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200",
+        "role": "tutor",
+        "status": "active",
+        "created_at": "2026-09-02T16:15:00.000Z",
+        "updated_at": "2026-09-02T16:15:00.000Z"
+      },
+      "subjects": [
+        {
+          "id": "sub-6",
+          "name": "English Literature",
+          "slug": "english"
+        }
+      ],
+      "boards": [
+        {
+          "id": "brd-1",
+          "name": "CBSE"
+        },
+        {
+          "id": "brd-2",
+          "name": "ICSE / ISC"
+        }
+      ],
+      "languages": [
+        "English",
+        "Hindi",
+        "Bengali"
+      ],
+      "availability": [
+        {
+          "id": "av-ananya-1",
+          "tutor_id": "tut-ananya-eng",
+          "day_of_week": 6,
+          "start_time": "10:00",
+          "end_time": "14:00",
+          "timezone": "Asia/Kolkata",
+          "is_available": true
+        }
+      ]
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk-1789806466024",
+      "student_id": "usr-1788867195181-suanq",
+      "tutor_id": "usr-1789012615796-vi20r",
+      "subject_id": "sub-1",
+      "scheduled_start": "2026-09-20T08:27:45.085Z",
+      "scheduled_end": "2026-09-20T09:27:45.085Z",
+      "duration_minutes": 60,
+      "hourly_rate": 1500,
+      "subtotal": 1500,
+      "platform_commission": 375,
+      "tutor_earning": 1125,
+      "currency": "INR",
+      "status": "confirmed",
+      "meeting_id": "tp-meet-w7dko0",
+      "notes": "",
+      "created_at": "2026-09-19T08:27:46.024Z",
+      "updated_at": "2026-09-19T08:27:46.024Z",
+      "tutor": {
+        "id": "tut-sharma-math",
+        "user_id": "usr-1789012615796-vi20r",
+        "headline": "IIT Bombay Alum • Calculus & Algebra Specialist",
+        "bio": "Mentored 200+ students to top 1,000 ranks in JEE Advanced and 95%+ in CBSE Class 12 Boards. Focused on clarity, speed, and geometric visualization.",
+        "qualifications": "B.Tech & M.Tech in CSE from IIT Bombay",
+        "degree": "M.Tech CSE",
+        "institution": "IIT Bombay",
+        "teaching_methodology": "Socratic question-driven tutoring with step-by-step whiteboard derivations.",
+        "experience_years": 8,
+        "hourly_rate": 1500,
+        "verification_status": "verified",
+        "timezone": "Asia/Kolkata",
+        "average_rating": 4.98,
+        "total_reviews": 62,
+        "total_classes_taught": 190,
+        "profile_completion_percentage": 100,
+        "created_at": "2026-09-10T03:56:55.796Z",
+        "updated_at": "2026-09-10T03:56:55.796Z",
+        "user": {
+          "id": "usr-1789012615796-vi20r",
+          "phone": "7209691128",
+          "full_name": "Dr. Arjun Sharma",
+          "email": "arjun.sharma@tutorplug.com",
+          "avatar_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200",
+          "role": "tutor",
+          "status": "active",
+          "created_at": "2026-09-10T03:56:55.796Z",
+          "updated_at": "2026-09-10T03:56:55.796Z"
+        },
+        "subjects": [
+          {
+            "id": "sub-1",
+            "name": "Mathematics",
+            "slug": "mathematics"
+          },
+          {
+            "id": "sub-4",
+            "name": "Computer Science",
+            "slug": "computer-science"
+          }
+        ],
+        "boards": [
+          {
+            "id": "brd-1",
+            "name": "CBSE"
+          },
+          {
+            "id": "brd-2",
+            "name": "ICSE / ISC"
+          },
+          {
+            "id": "brd-3",
+            "name": "IB (International Baccalaureate)"
+          }
+        ],
+        "languages": [
+          "English",
+          "Hindi"
+        ],
+        "availability": [
+          {
+            "id": "av-sharma-1",
+            "tutor_id": "tut-sharma-math",
+            "day_of_week": 2,
+            "start_time": "16:00",
+            "end_time": "20:00",
+            "timezone": "Asia/Kolkata",
+            "is_available": true
+          },
+          {
+            "id": "av-sharma-2",
+            "tutor_id": "tut-sharma-math",
+            "day_of_week": 4,
+            "start_time": "16:00",
+            "end_time": "20:00",
+            "timezone": "Asia/Kolkata",
+            "is_available": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "bk-1789806465982",
+      "student_id": "usr-1788867195181-suanq",
+      "tutor_id": "usr-1789012615796-vi20r",
+      "subject_id": "sub-1",
+      "scheduled_start": "2026-09-20T08:27:45.085Z",
+      "scheduled_end": "2026-09-20T09:27:45.085Z",
+      "duration_minutes": 60,
+      "hourly_rate": 1500,
+      "subtotal": 1500,
+      "platform_commission": 375,
+      "tutor_earning": 1125,
+      "currency": "INR",
+      "status": "confirmed",
+      "meeting_id": "tp-meet-uo8mlw",
+      "notes": "",
+      "created_at": "2026-09-19T08:27:45.982Z",
+      "updated_at": "2026-09-19T08:27:45.982Z",
+      "tutor": {
+        "id": "tut-sharma-math",
+        "user_id": "usr-1789012615796-vi20r",
+        "headline": "IIT Bombay Alum • Calculus & Algebra Specialist",
+        "bio": "Mentored 200+ students to top 1,000 ranks in JEE Advanced and 95%+ in CBSE Class 12 Boards. Focused on clarity, speed, and geometric visualization.",
+        "qualifications": "B.Tech & M.Tech in CSE from IIT Bombay",
+        "degree": "M.Tech CSE",
+        "institution": "IIT Bombay",
+        "teaching_methodology": "Socratic question-driven tutoring with step-by-step whiteboard derivations.",
+        "experience_years": 8,
+        "hourly_rate": 1500,
+        "verification_status": "verified",
+        "timezone": "Asia/Kolkata",
+        "average_rating": 4.98,
+        "total_reviews": 62,
+        "total_classes_taught": 190,
+        "profile_completion_percentage": 100,
+        "created_at": "2026-09-10T03:56:55.796Z",
+        "updated_at": "2026-09-10T03:56:55.796Z",
+        "user": {
+          "id": "usr-1789012615796-vi20r",
+          "phone": "7209691128",
+          "full_name": "Dr. Arjun Sharma",
+          "email": "arjun.sharma@tutorplug.com",
+          "avatar_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200",
+          "role": "tutor",
+          "status": "active",
+          "created_at": "2026-09-10T03:56:55.796Z",
+          "updated_at": "2026-09-10T03:56:55.796Z"
+        },
+        "subjects": [
+          {
+            "id": "sub-1",
+            "name": "Mathematics",
+            "slug": "mathematics"
+          },
+          {
+            "id": "sub-4",
+            "name": "Computer Science",
+            "slug": "computer-science"
+          }
+        ],
+        "boards": [
+          {
+            "id": "brd-1",
+            "name": "CBSE"
+          },
+          {
+            "id": "brd-2",
+            "name": "ICSE / ISC"
+          },
+          {
+            "id": "brd-3",
+            "name": "IB (International Baccalaureate)"
+          }
+        ],
+        "languages": [
+          "English",
+          "Hindi"
+        ],
+        "availability": [
+          {
+            "id": "av-sharma-1",
+            "tutor_id": "tut-sharma-math",
+            "day_of_week": 2,
+            "start_time": "16:00",
+            "end_time": "20:00",
+            "timezone": "Asia/Kolkata",
+            "is_available": true
+          },
+          {
+            "id": "av-sharma-2",
+            "tutor_id": "tut-sharma-math",
+            "day_of_week": 4,
+            "start_time": "16:00",
+            "end_time": "20:00",
+            "timezone": "Asia/Kolkata",
+            "is_available": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "bk-1789710000001",
+      "student_id": "usr-student-main",
+      "tutor_id": "usr-1788795018002-quazl",
+      "subject_id": "sub-2",
+      "scheduled_start": "2026-09-18T14:00:00.000Z",
+      "scheduled_end": "2026-09-18T15:00:00.000Z",
+      "duration_minutes": 60,
+      "hourly_rate": 1800,
+      "subtotal": 1800,
+      "platform_commission": 450,
+      "tutor_earning": 1350,
+      "currency": "INR",
+      "status": "confirmed",
+      "meeting_id": "tp-meet-phy101",
+      "notes": "Electromagnetic Induction and Alternating Current concepts review",
+      "created_at": "2026-09-17T10:00:00.000Z",
+      "updated_at": "2026-09-17T10:00:00.000Z",
+      "subject": {
+        "id": "sub-2",
+        "name": "Physics",
+        "slug": "physics"
+      },
+      "tutor": {
+        "id": "tut-1788795034320",
+        "user_id": "usr-1788795018002-quazl",
+        "headline": "Former HOD Physics • 15+ Yrs Exp • Ex-FIITJEE",
+        "user": {
+          "id": "usr-1788795018002-quazl",
+          "full_name": "Prof. Rajesh Kumar",
+          "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200"
+        }
+      }
+    },
+    {
+      "id": "bk-1789710000002",
+      "student_id": "usr-student-main",
+      "tutor_id": "usr-1789012615796-vi20r",
+      "subject_id": "sub-1",
+      "scheduled_start": "2026-09-19T11:00:00.000Z",
+      "scheduled_end": "2026-09-19T12:00:00.000Z",
+      "duration_minutes": 60,
+      "hourly_rate": 1500,
+      "subtotal": 1500,
+      "platform_commission": 375,
+      "tutor_earning": 1125,
+      "currency": "INR",
+      "status": "confirmed",
+      "meeting_id": "tp-meet-math202",
+      "notes": "Definite Integrals and Differential Equations Masterclass",
+      "created_at": "2026-09-17T12:00:00.000Z",
+      "updated_at": "2026-09-17T12:00:00.000Z",
+      "subject": {
+        "id": "sub-1",
+        "name": "Mathematics",
+        "slug": "mathematics"
+      },
+      "tutor": {
+        "id": "tut-sharma-math",
+        "user_id": "usr-1789012615796-vi20r",
+        "headline": "IIT Bombay Alum • Calculus & Algebra Specialist",
+        "user": {
+          "id": "usr-1789012615796-vi20r",
+          "full_name": "Dr. Arjun Sharma",
+          "avatar_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200"
+        }
+      }
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay-1",
+      "booking_id": "bk-1789710000001",
+      "amount": 1800,
+      "currency": "INR",
+      "status": "completed",
+      "method": "upi",
+      "created_at": "2026-09-17T10:05:00.000Z"
+    }
+  ],
+  "otp_records": [],
+  "sms_config": {
+    "provider": "fast2sms",
+    "api_key": "2SgcKfVpvQDETn6Zmh8M7zAUCL5O0luse9HIjFJkqrYPyB1WaXQYNp6nar4lsItUEdxjRV5GwL01mqc3",
+    "is_active": true
+  },
+  "classes": [
+    {
+      "id": "cls-1789806472000-fii9",
+      "title": "Tutoring Room ROOM-TP-MEET-W7DKO0",
+      "subject": "General Tutoring",
+      "teacher_id": "usr-1788795018002-quazl",
+      "student_ids": [
+        "usr-student-main"
+      ],
+      "created_by": "admin",
+      "status": "live",
+      "scheduled_start": "2026-09-19T08:27:52.000Z",
+      "scheduled_end": "2026-09-19T09:27:52.001Z",
+      "duration_minutes": 60,
+      "recurring": false,
+      "recording_mandatory": true,
+      "student_screen_share_allowed": true,
+      "meeting_code": "ROOM-TP-MEET-W7DKO0",
+      "notes": "",
+      "created_at": "2026-09-19T08:27:52.001Z"
+    },
+    {
+      "id": "cls-1789806264246-1epc",
+      "title": "Tutoring Room TP-99281",
+      "subject": "General Tutoring",
+      "teacher_id": "usr-1788795018002-quazl",
+      "student_ids": [
+        "usr-student-main"
+      ],
+      "created_by": "admin",
+      "status": "live",
+      "scheduled_start": "2026-09-19T08:24:24.246Z",
+      "scheduled_end": "2026-09-19T09:24:24.246Z",
+      "duration_minutes": 60,
+      "recurring": false,
+      "recording_mandatory": true,
+      "student_screen_share_allowed": true,
+      "meeting_code": "TP-99281",
+      "notes": "",
+      "created_at": "2026-09-19T08:24:24.246Z"
+    },
+    {
+      "id": "cls-phy101",
+      "title": "Physics — Kinematics & Laws of Motion",
+      "subject": "Physics",
+      "teacher_id": "usr-1788795018002-quazl",
+      "student_ids": [
+        "usr-student-main"
+      ],
+      "created_by": "usr-1788795018002-quazl",
+      "status": "scheduled",
+      "scheduled_start": "2026-09-19T08:26:07.965Z",
+      "scheduled_end": "2026-09-19T09:26:07.965Z",
+      "duration_minutes": 60,
+      "recurring": false,
+      "recording_mandatory": true,
+      "student_screen_share_allowed": true,
+      "meeting_code": "TP-8F3K2",
+      "notes": "Formula derivation, projectile motion graphs and numerical problem solving.",
+      "created_at": "2026-09-18T06:26:07.965Z"
+    },
+    {
+      "id": "cls-math202",
+      "title": "Mathematics — Definite Integrals Masterclass",
+      "subject": "Mathematics",
+      "teacher_id": "usr-1789012615796-vi20r",
+      "student_ids": [
+        "usr-student-rohan"
+      ],
+      "created_by": "usr-1789012615796-vi20r",
+      "status": "completed",
+      "scheduled_start": "2026-09-18T04:26:07.965Z",
+      "scheduled_end": "2026-09-18T05:26:07.965Z",
+      "duration_minutes": 75,
+      "recurring": false,
+      "recording_mandatory": true,
+      "student_screen_share_allowed": true,
+      "meeting_code": "TP-MTH01",
+      "notes": "Integration by substitution, Leibniz rule, and JEE Advanced problems.",
+      "created_at": "2026-09-17T06:26:07.965Z"
+    },
+    {
+      "id": "cls-chem303",
+      "title": "Chemistry — Organic Reaction Mechanisms",
+      "subject": "Chemistry",
+      "teacher_id": "usr-tutor-priya",
+      "student_ids": [
+        "usr-student-main",
+        "usr-student-rohan"
+      ],
+      "created_by": "usr-tutor-priya",
+      "status": "live",
+      "scheduled_start": "2026-09-19T06:06:07.965Z",
+      "scheduled_end": "2026-09-19T07:06:07.965Z",
+      "duration_minutes": 60,
+      "recurring": true,
+      "recording_mandatory": true,
+      "student_screen_share_allowed": true,
+      "meeting_code": "TP-CHM99",
+      "notes": "Electrophilic aromatic substitution, inductive effects, and live practice.",
+      "created_at": "2026-09-18T18:26:07.965Z"
+    }
+  ],
+  "meetings": [
+    {
+      "id": "mtg-1789806472007-jegu",
+      "class_id": "cls-1789806472000-fii9",
+      "meeting_code": "ROOM-TP-MEET-W7DKO0",
+      "started_at": "2026-09-19T08:27:52.007Z",
+      "status": "active",
+      "active_participants_count": 1
+    },
+    {
+      "id": "mtg-1789806264254-mkqq",
+      "class_id": "cls-1789806264246-1epc",
+      "meeting_code": "TP-99281",
+      "started_at": "2026-09-19T08:24:24.254Z",
+      "status": "active",
+      "active_participants_count": 1
+    },
+    {
+      "id": "mtg-chem303",
+      "class_id": "cls-chem303",
+      "meeting_code": "TP-CHM99",
+      "started_at": "2026-09-19T06:06:07.965Z",
+      "status": "active",
+      "active_participants_count": 2
+    },
+    {
+      "id": "mtg-math202",
+      "class_id": "cls-math202",
+      "meeting_code": "TP-MTH01",
+      "started_at": "2026-09-18T04:26:07.965Z",
+      "ended_at": "2026-09-18T05:41:27.965Z",
+      "status": "ended",
+      "active_participants_count": 2
+    }
+  ],
+  "recordings": [
+    {
+      "meeting_id": "TP-99281",
+      "class_id": "cls-1789806264246-1epc",
+      "teacher_id": "usr-1788795018002-quazl",
+      "student_id": "usr-student-main",
+      "title": "General Tutoring — Session Recording (TP-99281)",
+      "storage_path": "recordings\\rec-1789806449492-qvz5.webm",
+      "file_url": "/api/recordings/stream?id=rec-1789806449492-qvz5",
+      "file_size": 38347783,
+      "duration_seconds": 181,
+      "started_at": "2026-09-19T08:24:28.762Z",
+      "ended_at": "2026-09-19T08:27:29.764Z",
+      "status": "available",
+      "retention_days": 90,
+      "id": "rec-1789806449768-k0k5",
+      "created_at": "2026-09-19T08:27:29.768Z"
+    },
+    {
+      "id": "rec-math202",
+      "meeting_id": "mtg-math202",
+      "class_id": "cls-math202",
+      "teacher_id": "usr-1789012615796-vi20r",
+      "student_id": "usr-student-rohan",
+      "title": "Mathematics — Definite Integrals Masterclass",
+      "storage_path": "recordings/rec-math202.webm",
+      "file_url": "/api/recordings/stream?id=rec-math202",
+      "file_size": 45890200,
+      "duration_seconds": 4520,
+      "started_at": "2026-09-18T04:26:07.965Z",
+      "ended_at": "2026-09-18T05:41:27.965Z",
+      "status": "available",
+      "retention_days": 90,
+      "created_at": "2026-09-18T05:26:07.965Z"
+    },
+    {
+      "id": "rec-phy100",
+      "meeting_id": "mtg-phy100",
+      "class_id": "cls-phy101",
+      "teacher_id": "usr-1788795018002-quazl",
+      "student_id": "usr-student-main",
+      "title": "Physics — Kinematics Foundation Review",
+      "storage_path": "recordings/rec-phy100.webm",
+      "file_url": "/api/recordings/stream?id=rec-phy100",
+      "file_size": 58210340,
+      "duration_seconds": 5520,
+      "started_at": "2026-09-15T06:26:07.965Z",
+      "ended_at": "2026-09-15T07:58:07.965Z",
+      "status": "available",
+      "retention_days": 90,
+      "created_at": "2026-09-15T06:26:07.965Z"
+    }
+  ],
+  "policy_violations": [
+    {
+      "id": "viol-1",
+      "meeting_id": "mtg-chem303",
+      "class_id": "cls-chem303",
+      "user_id": "usr-student-rohan",
+      "user_name": "Rohan Mehta",
+      "user_role": "student",
+      "message_id": "msg-viol-1",
+      "message_snippet": "Ma'am please WhatsApp me at 9876543210 for the question paper pdf",
+      "category": "phone",
+      "confidence": 0.96,
+      "status": "pending_review",
+      "admin_action": "none",
+      "created_at": "2026-09-19T06:11:07.965Z"
+    },
+    {
+      "id": "viol-2",
+      "meeting_id": "mtg-math202",
+      "class_id": "cls-math202",
+      "user_id": "usr-student-rohan",
+      "user_name": "Rohan Mehta",
+      "user_role": "student",
+      "message_id": "msg-viol-2",
+      "message_snippet": "Can I pay the mentoring fees directly via UPI rohan@okhdfcbank?",
+      "category": "payment_upi",
+      "confidence": 0.98,
+      "status": "pending_review",
+      "admin_action": "none",
+      "created_at": "2026-09-18T05:26:07.965Z"
+    }
+  ],
+  "chat_messages": [
+    {
+      "id": "msg-1",
+      "meeting_id": "mtg-math202",
+      "class_id": "cls-math202",
+      "sender_id": "usr-1789012615796-vi20r",
+      "sender_name": "Dr. Arjun Sharma",
+      "sender_role": "tutor",
+      "message": "Welcome Rohan! Today we cover Definite Integrals and the Fundamental Theorem of Calculus.",
+      "message_type": "text",
+      "created_at": "2026-09-18T04:27:07.965Z",
+      "moderation_status": "clean"
+    },
+    {
+      "id": "msg-2",
+      "meeting_id": "mtg-math202",
+      "class_id": "cls-math202",
+      "sender_id": "usr-student-rohan",
+      "sender_name": "Rohan Mehta",
+      "sender_role": "student",
+      "message": "Sir, I have a doubt regarding Equation 4 on the board.",
+      "message_type": "text",
+      "created_at": "2026-09-18T04:28:07.965Z",
+      "moderation_status": "clean"
+    },
+    {
+      "id": "msg-3",
+      "meeting_id": "mtg-math202",
+      "class_id": "cls-math202",
+      "sender_id": "usr-1789012615796-vi20r",
+      "sender_name": "Dr. Arjun Sharma",
+      "sender_role": "tutor",
+      "message": "Look closely at the substitution of u = tan(x/2), notice how dx transforms into 2du / (1 + u^2).",
+      "message_type": "text",
+      "created_at": "2026-09-18T04:29:27.965Z",
+      "moderation_status": "clean"
+    },
+    {
+      "meeting_id": "ROOM-TP-MEET-W7DKO0",
+      "class_id": "cls-1789806472000-fii9",
+      "sender_id": "usr-1788867195181-suanq",
+      "sender_name": "New Member",
+      "sender_role": "student",
+      "message": "hii",
+      "message_type": "text",
+      "moderation_status": "clean",
+      "id": "cmsg-1789836551352-yu5t",
+      "created_at": "2026-09-19T16:49:11.352Z"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "att-1789836536917-c0sb",
+      "meeting_id": "ROOM-TP-MEET-W7DKO0",
+      "class_id": "cls-1789806472000-fii9",
+      "user_id": "usr-1788867195181-suanq",
+      "user_name": "New Member",
+      "user_role": "student",
+      "joined_at": "2026-09-19T16:48:56.917Z",
+      "duration_seconds": 46,
+      "reconnection_count": 4,
+      "last_heartbeat": "2026-09-19T16:49:43.785Z",
+      "left_at": "2026-09-19T16:49:43.785Z"
+    },
+    {
+      "id": "att-1789836536819-tq72",
+      "meeting_id": "ROOM-TP-MEET-W7DKO0",
+      "class_id": "ROOM-TP-MEET-W7DKO0",
+      "user_id": "usr-1788867195181-suanq",
+      "user_name": "New Member",
+      "user_role": "student",
+      "joined_at": "2026-09-19T16:48:56.819Z",
+      "duration_seconds": 0,
+      "reconnection_count": 3,
+      "last_heartbeat": "2026-09-19T16:48:56.893Z",
+      "left_at": "2026-09-19T16:48:56.893Z"
+    },
+    {
+      "id": "att-1789836536493-ouzu",
+      "meeting_id": "ROOM-TP-MEET-W7DKO0",
+      "class_id": "ROOM-TP-MEET-W7DKO0",
+      "user_id": "usr-1788867195181-suanq",
+      "user_name": "New Member",
+      "user_role": "student",
+      "joined_at": "2026-09-19T16:48:56.493Z",
+      "duration_seconds": 0,
+      "reconnection_count": 2,
+      "last_heartbeat": "2026-09-19T16:48:56.787Z",
+      "left_at": "2026-09-19T16:48:56.787Z"
+    },
+    {
+      "id": "att-1789806472159-r1w3",
+      "meeting_id": "ROOM-TP-MEET-W7DKO0",
+      "class_id": "ROOM-TP-MEET-W7DKO0",
+      "user_id": "usr-1788867195181-suanq",
+      "user_name": "New Member",
+      "user_role": "student",
+      "joined_at": "2026-09-19T08:27:52.159Z",
+      "duration_seconds": 0,
+      "reconnection_count": 1,
+      "last_heartbeat": "2026-09-19T08:27:52.261Z",
+      "left_at": "2026-09-19T08:27:52.261Z"
+    },
+    {
+      "id": "att-1789806472040-h8kz",
+      "meeting_id": "ROOM-TP-MEET-W7DKO0",
+      "class_id": "ROOM-TP-MEET-W7DKO0",
+      "user_id": "usr-1788867195181-suanq",
+      "user_name": "New Member",
+      "user_role": "student",
+      "joined_at": "2026-09-19T08:27:52.040Z",
+      "duration_seconds": 0,
+      "reconnection_count": 0,
+      "last_heartbeat": "2026-09-19T08:27:52.115Z",
+      "left_at": "2026-09-19T08:27:52.115Z"
+    },
+    {
+      "id": "att-1789806264900-uvir",
+      "meeting_id": "TP-99281",
+      "class_id": "cls-1789806264246-1epc",
+      "user_id": "usr-1788867195181-suanq",
+      "user_name": "New Member",
+      "user_role": "student",
+      "joined_at": "2026-09-19T08:24:24.900Z",
+      "duration_seconds": 185,
+      "reconnection_count": 1,
+      "last_heartbeat": "2026-09-19T08:27:30.144Z",
+      "left_at": "2026-09-19T08:27:30.144Z"
+    },
+    {
+      "id": "att-1789806264040-o47i",
+      "meeting_id": "TP-99281",
+      "class_id": "TP-99281",
+      "user_id": "usr-1788867195181-suanq",
+      "user_name": "New Member",
+      "user_role": "student",
+      "joined_at": "2026-09-19T08:24:24.040Z",
+      "duration_seconds": 0,
+      "reconnection_count": 0,
+      "last_heartbeat": "2026-09-19T08:24:24.092Z",
+      "left_at": "2026-09-19T08:24:24.092Z"
+    },
+    {
+      "id": "att-1",
+      "meeting_id": "mtg-math202",
+      "class_id": "cls-math202",
+      "user_id": "usr-1789012615796-vi20r",
+      "user_name": "Dr. Arjun Sharma",
+      "user_role": "tutor",
+      "joined_at": "2026-09-18T04:26:07.965Z",
+      "left_at": "2026-09-18T05:41:27.965Z",
+      "duration_seconds": 4520,
+      "reconnection_count": 0,
+      "last_heartbeat": "2026-09-18T05:41:27.965Z"
+    },
+    {
+      "id": "att-2",
+      "meeting_id": "mtg-math202",
+      "class_id": "cls-math202",
+      "user_id": "usr-student-rohan",
+      "user_name": "Rohan Mehta",
+      "user_role": "student",
+      "joined_at": "2026-09-18T04:26:37.965Z",
+      "left_at": "2026-09-18T05:41:27.965Z",
+      "duration_seconds": 4490,
+      "reconnection_count": 1,
+      "last_heartbeat": "2026-09-18T05:41:27.965Z"
+    }
+  ],
+  "platform_settings": {
+    "recording_retention_days": 90,
+    "chat_retention_days": 180,
+    "file_retention_days": 90,
+    "moderation_sensitivity": "standard",
+    "auto_block_contact_info": true,
+    "allow_student_screen_share_default": true,
+    "recording_mandatory_default": true
+  },
+  "policy_acceptances": [
+    {
+      "id": "pa-1789806309430",
+      "user_id": "usr-1788867195181-suanq",
+      "user_role": "student",
+      "policy_version": "1.0",
+      "accepted_at": "2026-09-19T08:25:09.430Z"
+    }
+  ],
+  "audit_logs": []
+}
