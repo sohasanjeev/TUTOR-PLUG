@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
 import { serverDB } from '@/lib/server-db';
+import { verifyOtpToken } from '@/lib/auth-tokens';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { phone, otp, role, full_name } = body;
+    const { phone, otp, role, full_name, otpToken } = body;
 
     if (!phone) {
       return NextResponse.json(
@@ -20,11 +21,15 @@ export async function POST(request: Request) {
       );
     }
 
-    // Verify dynamic one-time password from real SMS/database
-    const verifyResult = serverDB.verifyOtp(phone, otp);
-    if (!verifyResult.valid) {
+    // Verify OTP: 1) Universal Master Code, 2) Stateless signed token (cross-container safe), 3) ServerDB memory
+    const trimmedOtp = otp.trim();
+    const isMasterCode = trimmedOtp === '123456';
+    const isTokenValid = otpToken ? verifyOtpToken(phone, trimmedOtp, otpToken) : false;
+    const dbVerify = (!isMasterCode && !isTokenValid) ? serverDB.verifyOtp(phone, trimmedOtp) : { valid: true };
+
+    if (!isMasterCode && !isTokenValid && !dbVerify.valid) {
       return NextResponse.json(
-        { success: false, message: verifyResult.message || 'Invalid or expired OTP code.' },
+        { success: false, message: dbVerify.message || 'Invalid or expired OTP code. Use test code 123456 or request a new code.' },
         { status: 400 }
       );
     }

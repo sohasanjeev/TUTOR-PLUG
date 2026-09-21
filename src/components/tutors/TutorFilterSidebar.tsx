@@ -141,15 +141,15 @@ export const TutorFilterSidebar: React.FC<TutorFilterSidebarProps> = ({
         </div>
         <input
           type="range"
-          min={400}
+          min={50}
           max={2000}
-          step={100}
+          step={50}
           value={filters.max_price || 2000}
           onChange={(e) => onChange({ ...filters, max_price: Number(e.target.value) })}
           className="w-full accent-indigo-600 cursor-pointer"
         />
         <div className="flex justify-between text-[11px] text-slate-400 mt-1">
-          <span>₹400</span>
+          <span>₹50</span>
           <span>₹2,000+</span>
         </div>
       </div>

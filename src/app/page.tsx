@@ -26,6 +26,9 @@ import {
   GraduationCap,
   ChevronRight,
   HelpCircle,
+  Film,
+  PlayCircle,
+  Radio,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -125,6 +128,11 @@ export default function HomePage() {
                   Find a Tutor
                 </Button>
               </Link>
+              <Link href="/classroom/TP-8F3K2" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto border-indigo-200 bg-indigo-50/80 text-indigo-700 hover:bg-indigo-100 hover:border-indigo-300" leftIcon={<Video className="h-4 w-4 text-indigo-600" />}>
+                  Launch Virtual Classroom
+                </Button>
+              </Link>
               <Link href="/become-a-tutor" className="w-full sm:w-auto">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto">
                   Become a Tutor
@@ -210,6 +218,110 @@ export default function HomePage() {
                 </Button>
               </div>
             </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Live Classroom & Recording Showcase */}
+      <section className="py-14 bg-gradient-to-b from-white via-indigo-50/40 to-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100/70 border border-indigo-200 text-indigo-800 text-xs font-bold mb-3">
+              <Sparkles className="h-3.5 w-3.5 text-indigo-600" />
+              <span>Full Video Classroom & Recording Platform</span>
+            </div>
+            <h2 className="text-3xl font-black text-slate-900 tracking-tight">
+              Virtual Classroom & Recordings
+            </h2>
+            <p className="mt-2 text-sm text-slate-600">
+              Built specifically for modern tutoring: unlimited classes, HD video & audio, interactive whiteboard, live chat, and automated recording vault.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1: Virtual Classroom */}
+            <div className="rounded-3xl bg-slate-900 text-white p-6 sm:p-7 shadow-xl border border-slate-800 flex flex-col justify-between relative overflow-hidden group">
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Video className="h-28 w-28 text-indigo-400" />
+              </div>
+              <div className="relative z-10 space-y-4">
+                <div className="h-12 w-12 rounded-2xl bg-indigo-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30">
+                  <Video className="h-6 w-6" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/70 px-2 py-0.5 rounded border border-emerald-500/30">
+                    Interactive WebRTC
+                  </span>
+                  <h3 className="text-lg font-bold text-white mt-2">
+                    Live Virtual Classroom
+                  </h3>
+                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                    HD audio & video, screen sharing, real-time shared whiteboard with drawing tools, device selectors, in-meeting chat, and image sharing.
+                  </p>
+                </div>
+              </div>
+              <div className="relative z-10 pt-6 mt-4 border-t border-slate-800">
+                <Link href="/classroom/TP-8F3K2">
+                  <Button variant="gradient" size="sm" className="w-full" rightIcon={<ArrowRight className="h-4 w-4" />}>
+                    Launch Live Classroom Demo
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 2: Recording Vault */}
+            <div className="rounded-3xl bg-white p-6 sm:p-7 shadow-lg shadow-slate-200/50 border border-slate-200/90 flex flex-col justify-between relative overflow-hidden group">
+              <div className="space-y-4">
+                <div className="h-12 w-12 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-700">
+                  <Film className="h-6 w-6" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">
+                    Cloud Storage
+                  </span>
+                  <h3 className="text-lg font-bold text-slate-900 mt-2">
+                    Class Recordings Vault
+                  </h3>
+                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                    Automated meeting session recordings stored securely for revision. Search, filter, stream video playback, and review compliance logs.
+                  </p>
+                </div>
+              </div>
+              <div className="pt-6 mt-4 border-t border-slate-100">
+                <Link href="/admin/recordings">
+                  <Button variant="outline" size="sm" className="w-full hover:bg-purple-50 hover:border-purple-300 hover:text-purple-700" rightIcon={<ArrowRight className="h-4 w-4" />}>
+                    View Class Recordings
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 3: Scheduled Classes */}
+            <div className="rounded-3xl bg-white p-6 sm:p-7 shadow-lg shadow-slate-200/50 border border-slate-200/90 flex flex-col justify-between relative overflow-hidden group">
+              <div className="space-y-4">
+                <div className="h-12 w-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-700">
+                  <Calendar className="h-6 w-6" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                    Live Scheduler
+                  </span>
+                  <h3 className="text-lg font-bold text-slate-900 mt-2">
+                    Scheduled Classes & Codes
+                  </h3>
+                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                    View upcoming and past tutoring classes. Join directly with meeting codes (e.g. TP-8F3K2) or 1-click launch links.
+                  </p>
+                </div>
+              </div>
+              <div className="pt-6 mt-4 border-t border-slate-100">
+                <Link href="/student/classes">
+                  <Button variant="outline" size="sm" className="w-full hover:bg-emerald-50 hover:border-emerald-300 hover:text-emerald-700" rightIcon={<ArrowRight className="h-4 w-4" />}>
+                    Browse Scheduled Classes
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

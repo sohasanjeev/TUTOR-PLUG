@@ -260,16 +260,16 @@ export default function TutorOnboardingPage() {
               </div>
               <input
                 type="range"
-                min={400}
-                max={3000}
-                step={100}
+                min={50}
+                max={2500}
+                step={50}
                 value={hourlyRate}
                 onChange={(e) => setHourlyRate(Number(e.target.value))}
                 className="w-full accent-indigo-600 cursor-pointer"
               />
               <div className="flex justify-between text-[11px] text-slate-400 mt-1">
-                <span>₹400/hr</span>
-                <span>₹3,000/hr</span>
+                <span>₹50/hr</span>
+                <span>₹2,500/hr</span>
               </div>
             </div>
           </div>

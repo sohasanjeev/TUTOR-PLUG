@@ -17,7 +17,13 @@ export async function GET(req: NextRequest) {
       return new NextResponse('Recording not found', { status: 404 });
     }
 
-    const fullPath = path.join(process.cwd(), 'data', recording.storage_path);
+    let fullPath = path.join(process.cwd(), 'data', recording.storage_path);
+    if (!fs.existsSync(fullPath)) {
+      const tmpPath = path.join('/tmp', recording.storage_path);
+      if (fs.existsSync(tmpPath)) {
+        fullPath = tmpPath;
+      }
+    }
 
     if (fs.existsSync(fullPath)) {
       const stat = fs.statSync(fullPath);

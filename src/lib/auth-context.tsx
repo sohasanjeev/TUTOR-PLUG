@@ -35,6 +35,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [user, setUser] = useState<Profile | null>(null);
   const [studentProfile, setStudentProfile] = useState<StudentProfile | null>(null);
   const [tutorProfile, setTutorProfile] = useState<TutorProfile | null>(null);
+  const [otpToken, setOtpToken] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
   // Load from localStorage if present
@@ -99,12 +100,16 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         body: JSON.stringify({ phone }),
       });
       const data = await res.json();
+      if (data.otpToken) {
+        setOtpToken(data.otpToken);
+      }
       setIsLoading(false);
       return {
         success: data.success,
         message: data.message || `Verification code sent to ${phone}`,
         delivered: data.delivered,
         devOtp: data.devOtp,
+        otpToken: data.otpToken,
         gatewayError: data.gatewayError,
       };
     } catch {
@@ -164,7 +169,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const res = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone, otp, role: desiredRole, full_name: fullName }),
+        body: JSON.stringify({ phone, otp, role: desiredRole, full_name: fullName, otpToken }),
       });
       const data = await res.json();
       setIsLoading(false);

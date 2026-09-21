@@ -22,6 +22,7 @@ import { INITIAL_SUBJECTS, INITIAL_BOARDS, INITIAL_CLASS_LEVELS } from '@/lib/co
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const DB_FILE = path.join(DATA_DIR, 'tutorplug_db.json');
+const TMP_DB_FILE = path.join('/tmp', 'tutorplug_db.json');
 
 export interface OTPRecord {
   phone: string;
@@ -130,18 +131,33 @@ class ServerDB {
   private signals: SignalEnvelope[] = [];
 
   private ensureDB(): DatabaseSchema {
+    if ((globalThis as any).__tutorplug_db_data) {
+      return (globalThis as any).__tutorplug_db_data;
+    }
+
     try {
-      if (!fs.existsSync(DATA_DIR)) {
-        fs.mkdirSync(DATA_DIR, { recursive: true });
-      }
+      try {
+        if (!fs.existsSync(DATA_DIR)) {
+          fs.mkdirSync(DATA_DIR, { recursive: true });
+        }
+      } catch {}
 
       let data: DatabaseSchema;
-      if (!fs.existsSync(DB_FILE)) {
-        data = getInitialData();
-        fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
-      } else {
+      if (fs.existsSync(DB_FILE)) {
         const raw = fs.readFileSync(DB_FILE, 'utf-8');
         data = JSON.parse(raw) as DatabaseSchema;
+      } else if (fs.existsSync(TMP_DB_FILE)) {
+        const raw = fs.readFileSync(TMP_DB_FILE, 'utf-8');
+        data = JSON.parse(raw) as DatabaseSchema;
+      } else {
+        data = getInitialData();
+        try {
+          fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
+        } catch {
+          try {
+            fs.writeFileSync(TMP_DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
+          } catch {}
+        }
       }
 
       // Ensure all required collections exist
@@ -393,24 +409,38 @@ class ServerDB {
       }
 
       if (modified) {
-        fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
+        try {
+          fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
+        } catch {
+          try {
+            fs.writeFileSync(TMP_DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
+          } catch {}
+        }
       }
 
+      (globalThis as any).__tutorplug_db_data = data;
       return data;
     } catch (err) {
       console.error('Database read error, initializing fallback:', err);
-      return getInitialData();
+      const fallback = getInitialData();
+      (globalThis as any).__tutorplug_db_data = fallback;
+      return fallback;
     }
   }
 
   private saveDB(data: DatabaseSchema) {
+    (globalThis as any).__tutorplug_db_data = data;
     try {
-      if (!fs.existsSync(DATA_DIR)) {
-        fs.mkdirSync(DATA_DIR, { recursive: true });
-      }
+      try {
+        if (!fs.existsSync(DATA_DIR)) {
+          fs.mkdirSync(DATA_DIR, { recursive: true });
+        }
+      } catch {}
       fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
     } catch (err) {
-      console.error('Database write error:', err);
+      try {
+        fs.writeFileSync(TMP_DB_FILE, JSON.stringify(data, null, 2), 'utf-8');
+      } catch {}
     }
   }
 

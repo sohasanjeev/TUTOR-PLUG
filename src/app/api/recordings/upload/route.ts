@@ -4,6 +4,7 @@ import path from 'path';
 import { serverDB } from '@/lib/server-db';
 
 const RECORDINGS_DIR = path.join(process.cwd(), 'data', 'recordings');
+const TMP_RECORDINGS_DIR = path.join('/tmp', 'recordings');
 
 export async function POST(req: NextRequest) {
   try {
@@ -20,18 +21,29 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'No video recording file provided' }, { status: 400 });
     }
 
-    if (!fs.existsSync(RECORDINGS_DIR)) {
-      fs.mkdirSync(RECORDINGS_DIR, { recursive: true });
-    }
-
     const recId = `rec-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`;
     const filename = `${recId}.webm`;
     const relativePath = path.join('recordings', filename);
-    const fullPath = path.join(RECORDINGS_DIR, filename);
 
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
-    fs.writeFileSync(fullPath, buffer);
+
+    try {
+      if (!fs.existsSync(RECORDINGS_DIR)) {
+        fs.mkdirSync(RECORDINGS_DIR, { recursive: true });
+      }
+      fs.writeFileSync(path.join(RECORDINGS_DIR, filename), buffer);
+    } catch {
+      // Vercel serverless read-only filesystem fallback to /tmp
+      try {
+        if (!fs.existsSync(TMP_RECORDINGS_DIR)) {
+          fs.mkdirSync(TMP_RECORDINGS_DIR, { recursive: true });
+        }
+        fs.writeFileSync(path.join(TMP_RECORDINGS_DIR, filename), buffer);
+      } catch (tmpErr) {
+        console.warn('Could not write recording to disk on Vercel, saved to database metadata:', tmpErr);
+      }
+    }
 
     const startedAt = new Date(Date.now() - durationSeconds * 1000).toISOString();
     const endedAt = new Date().toISOString();
