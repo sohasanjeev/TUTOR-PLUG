@@ -470,6 +470,63 @@ class ServerDB {
     return db.profiles.find((p) => p.id === id) || null;
   }
 
+  getProfileByEmail(email: string, role?: UserRole): Profile | null {
+    const db = this.ensureDB();
+    const cleanEmail = (email || '').toLowerCase().trim();
+    if (!cleanEmail) return null;
+    if (role) {
+      const match = db.profiles.find(
+        (p) => (p.email || '').toLowerCase() === cleanEmail && p.role === role
+      );
+      if (match) return match;
+    }
+    return db.profiles.find((p) => (p.email || '').toLowerCase() === cleanEmail) || null;
+  }
+
+  findOrCreateGoogleProfile(params: {
+    email: string;
+    full_name: string;
+    role?: UserRole;
+    avatar_url?: string;
+  }): Profile {
+    const db = this.ensureDB();
+    const cleanEmail = params.email.toLowerCase().trim();
+    const targetRole: UserRole = params.role || 'student';
+
+    let existing = this.getProfileByEmail(cleanEmail, targetRole);
+    if (!existing) {
+      existing = this.getProfileByEmail(cleanEmail);
+    }
+
+    if (existing) {
+      if (params.avatar_url && !existing.avatar_url) {
+        existing.avatar_url = params.avatar_url;
+      }
+      if (params.full_name && (!existing.full_name || existing.full_name === 'New Member')) {
+        existing.full_name = params.full_name;
+      }
+      existing.updated_at = new Date().toISOString();
+      this.saveDB(db);
+      return existing;
+    }
+
+    const newProfile: Profile = {
+      id: `usr-g-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
+      phone: '',
+      email: cleanEmail,
+      full_name: params.full_name || 'Google User',
+      avatar_url: params.avatar_url,
+      role: targetRole,
+      status: 'active',
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+    };
+
+    db.profiles.unshift(newProfile);
+    this.saveDB(db);
+    return newProfile;
+  }
+
   createProfile(params: { phone: string; full_name: string; role: UserRole; email?: string }): Profile {
     const db = this.ensureDB();
     const existing = this.getProfileByPhone(params.phone, params.role);

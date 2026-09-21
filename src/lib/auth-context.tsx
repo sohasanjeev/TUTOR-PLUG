@@ -21,6 +21,12 @@ interface AuthContextType {
     gatewayError?: string;
   }>;
   verifyOtp: (phone: string, otp: string, desiredRole?: UserRole, fullName?: string) => Promise<{ success: boolean; message?: string }>;
+  loginWithGoogle: (params: {
+    email: string;
+    name?: string;
+    role?: UserRole;
+    avatar?: string;
+  }) => Promise<{ success: boolean; message?: string }>;
   registerUser: (phone: string, fullName: string, role: UserRole) => Promise<{ success: boolean; message?: string }>;
   logout: () => void;
   updateUser: (updates: Partial<Profile>) => void;
@@ -188,6 +194,36 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
+  const loginWithGoogle = async (params: {
+    email: string;
+    name?: string;
+    role?: UserRole;
+    avatar?: string;
+  }) => {
+    setIsLoading(true);
+    try {
+      const res = await fetch('/api/auth/google', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(params),
+      });
+      const data = await res.json();
+      setIsLoading(false);
+
+      if (data.success && data.user) {
+        setUser(data.user);
+        setStudentProfile(data.studentProfile || null);
+        setTutorProfile(data.tutorProfile || null);
+        saveToStorage(data.user, data.studentProfile || null, data.tutorProfile || null);
+        return { success: true };
+      }
+      return { success: false, message: data.message || 'Google sign-in failed' };
+    } catch {
+      setIsLoading(false);
+      return { success: false, message: 'Server connection error during Google sign-in' };
+    }
+  };
+
   const switchDemoRole = async (role: UserRole) => {
     const demoProfiles: Record<UserRole, Profile> = {
       student: {
@@ -269,6 +305,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         isLoading,
         sendOtp,
         verifyOtp,
+        loginWithGoogle,
         registerUser,
         logout,
         updateUser,
